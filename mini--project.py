@@ -80,6 +80,18 @@ restaurant_sales = data[is_restaurant]
 is_media = data['to_randomly_generated_account'].isin(categories_dict['Media'])
 media_sales = data[is_media]
 
+is_fashion = data['to_randomly_generated_account'].isin(categories_dict['Fashion'])
+fashion_sales = data[is_fashion]
+
+is_electronic = data['to_randomly_generated_account'].isin(categories_dict['Electronic'])
+electronic_sales = data[is_electronic]
+
+is_child = data['to_randomly_generated_account'].isin(categories_dict['Child'])
+child_sales = data[is_child]
+
+is_flower = data['to_randomly_generated_account'].isin(categories_dict['Flower'])
+flower_sales = data[is_flower]
+
 # 将日期信息转换为日期时间对象
 cafe_sales['not_happened_yet_date'] = pd.to_datetime(cafe_sales['not_happened_yet_date'], format='%d/%m/%Y')
 
@@ -96,6 +108,14 @@ butcher_sales['not_happened_yet_date'] = pd.to_datetime(butcher_sales['not_happe
 restaurant_sales['not_happened_yet_date'] = pd.to_datetime(restaurant_sales['not_happened_yet_date'], format='%d/%m/%Y')
 
 media_sales['not_happened_yet_date'] = pd.to_datetime(media_sales['not_happened_yet_date'], format='%d/%m/%Y')
+
+fashion_sales['not_happened_yet_date'] = pd.to_datetime(fashion_sales['not_happened_yet_date'], format='%d/%m/%Y')
+
+electronic_sales['not_happened_yet_date'] = pd.to_datetime(electronic_sales['not_happened_yet_date'], format='%d/%m/%Y')
+
+child_sales['not_happened_yet_date'] = pd.to_datetime(child_sales['not_happened_yet_date'], format='%d/%m/%Y')
+
+flower_sales['not_happened_yet_date'] = pd.to_datetime(flower_sales['not_happened_yet_date'], format='%d/%m/%Y')
 
 # 按月份分组，并计算每个商店每月的销售额
 cafe_sales['month'] = cafe_sales['not_happened_yet_date'].dt.to_period('M')
@@ -122,6 +142,19 @@ restaurant_monthly_sales = restaurant_sales.groupby(['to_randomly_generated_acco
 media_sales['month'] = media_sales['not_happened_yet_date'].dt.to_period('M')
 media_monthly_sales = media_sales.groupby(['to_randomly_generated_account', 'month'])['monopoly_money_amount'].sum().reset_index()
 
+fashion_sales['month'] = fashion_sales['not_happened_yet_date'].dt.to_period('M')
+fashion_monthly_sales = fashion_sales.groupby(['to_randomly_generated_account', 'month'])['monopoly_money_amount'].sum().reset_index()
+
+electronic_sales['month'] = electronic_sales['not_happened_yet_date'].dt.to_period('M')
+electronic_monthly_sales = electronic_sales.groupby(['to_randomly_generated_account', 'month'])['monopoly_money_amount'].sum().reset_index()
+
+child_sales['month'] = child_sales['not_happened_yet_date'].dt.to_period('M')
+child_monthly_sales = child_sales.groupby(['to_randomly_generated_account', 'month'])['monopoly_money_amount'].sum().reset_index()
+
+flower_sales['month'] = flower_sales['not_happened_yet_date'].dt.to_period('M')
+flower_monthly_sales = flower_sales.groupby(['to_randomly_generated_account', 'month'])['monopoly_money_amount'].sum().reset_index()
+
+
 # 计算各个类别商店每月销售额的平均值
 cafe_average_monthly_sales = cafe_monthly_sales.groupby('month')['monopoly_money_amount'].mean()
 
@@ -139,6 +172,13 @@ restaurant_average_monthly_sales = restaurant_monthly_sales.groupby('month')['mo
 
 media_average_monthly_sales = media_monthly_sales.groupby('month')['monopoly_money_amount'].mean()
 
+fashion_average_monthly_sales = fashion_monthly_sales.groupby('month')['monopoly_money_amount'].mean()
+
+electronic_average_monthly_sales = electronic_monthly_sales.groupby('month')['monopoly_money_amount'].mean()
+
+child_average_monthly_sales = child_monthly_sales.groupby('month')['monopoly_money_amount'].mean()
+
+flower_average_monthly_sales = flower_monthly_sales.groupby('month')['monopoly_money_amount'].mean()
 
 # 打印结果
 print("Cafe 月均销售额：")
@@ -165,6 +205,18 @@ print(restaurant_average_monthly_sales)
 print("\nMedia 月均销售额：")
 print(media_average_monthly_sales)
 
+print("\nfashion 月均销售额：")
+print(fashion_average_monthly_sales)
+
+print("\nelectronic 月均销售额：")
+print(electronic_average_monthly_sales)
+
+print("\nChild 月均销售额：")
+print(child_average_monthly_sales)
+
+print("\nFlower 月均销售额：")
+print(flower_average_monthly_sales)
+
 # 将 Period 对象转换为浮点数
 cafe_average_monthly_sales.index = cafe_average_monthly_sales.index.to_timestamp().to_numpy().astype(float)
 
@@ -182,6 +234,14 @@ restaurant_average_monthly_sales.index = restaurant_average_monthly_sales.index.
 
 media_average_monthly_sales.index = media_average_monthly_sales.index.to_timestamp().to_numpy().astype(float)
 
+fashion_average_monthly_sales.index = fashion_average_monthly_sales.index.to_timestamp().to_numpy().astype(float)
+
+electronic_average_monthly_sales.index = electronic_average_monthly_sales.index.to_timestamp().to_numpy().astype(float)
+
+child_average_monthly_sales.index = child_average_monthly_sales.index.to_timestamp().to_numpy().astype(float)
+
+flower_average_monthly_sales.index = flower_average_monthly_sales.index.to_timestamp().to_numpy().astype(float)
+
 #尝试将上述表格合并成一个，但是失败，已经将month从period类型改为浮点数
 
 # 可视化月均销售额
@@ -194,6 +254,10 @@ plt.plot(book_shop_average_monthly_sales.index, book_shop_average_monthly_sales.
 plt.plot(butcher_average_monthly_sales.index, butcher_average_monthly_sales.values, label='Butcher', color='pink', marker='.')
 plt.plot(restaurant_average_monthly_sales.index, restaurant_average_monthly_sales.values, label='Restaurant', color='brown', marker=',')
 plt.plot(media_average_monthly_sales.index, media_average_monthly_sales.values, label='Media', color='purple', marker='1')
+plt.plot(fashion_average_monthly_sales.index, fashion_average_monthly_sales.values, label='Fashion', color='olive', marker='_')
+plt.plot(electronic_average_monthly_sales.index, electronic_average_monthly_sales.values, label='Electronic', color='skyblue', marker='|')
+plt.plot(child_average_monthly_sales.index, child_average_monthly_sales.values, label='Child', color='teal', marker='2')
+plt.plot(flower_average_monthly_sales.index, flower_average_monthly_sales.values, label='Flower', color='gray', marker='3')
 
 plt.title('Average Monthly Sales of Different Kinds Of Merchant')
 plt.xlabel('Month')
