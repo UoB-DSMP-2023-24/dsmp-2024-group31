@@ -22488,6 +22488,7 @@
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/transactional data/2109.10703.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/实验完整数据集/PS_20174392719_1491204439457_log.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/实验完整数据集/archive.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22563,7 +22564,7 @@
       <workItem from="1710028405991" duration="3081000" />
       <workItem from="1710032703560" duration="1842000" />
       <workItem from="1710034554173" duration="3939000" />
-      <workItem from="1710063533539" duration="1197000" />
+      <workItem from="1710063533539" duration="3404000" />
     </task>
     <task id="LOCAL-00001" summary="Version 01&#10;Split the dataset into two groups according to from_account and to_account&#10;&#10;This version focuses on the dataset in to_account.&#10;&#10;Process all the merchant users in to_account, including: merchant transaction frequency distribution, merchant time series transaction data and so on.">
       <option name="closed" value="true" />
