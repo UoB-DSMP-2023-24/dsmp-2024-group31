@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a9f188a-0b6c-4f3f-ae17-0a3f3a674f87" name="Changes" comment="Version 01&#10;Split the dataset into two groups according to from_account and to_account&#10;&#10;This version focuses on the dataset in to_account.&#10;&#10;Process all the merchant users in to_account, including: merchant transaction frequency distribution, merchant time series transaction data and so on.">
-      <change afterPath="$PROJECT_DIR$/.idea/dsmp-2024-group31.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/.idea/Mini Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/DSMP_ProbC_Lloyds_2024.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/Data_visual/From_Account/Personal_Account/account_1000.xlsx" afterDir="false" />
@@ -22570,7 +22563,7 @@
       <workItem from="1710028405991" duration="3081000" />
       <workItem from="1710032703560" duration="1842000" />
       <workItem from="1710034554173" duration="3939000" />
-      <workItem from="1710063533539" duration="823000" />
+      <workItem from="1710063533539" duration="1197000" />
     </task>
     <task id="LOCAL-00001" summary="Version 01&#10;Split the dataset into two groups according to from_account and to_account&#10;&#10;This version focuses on the dataset in to_account.&#10;&#10;Process all the merchant users in to_account, including: merchant transaction frequency distribution, merchant time series transaction data and so on.">
       <option name="closed" value="true" />
