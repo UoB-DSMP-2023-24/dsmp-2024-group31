@@ -8,7 +8,6 @@
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/Raw_Data/Random_data.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/Raw_Data/Split_raw_data.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Mini Project/Mini Project/Raw_Data/simple_data_10000.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +217,7 @@
       <workItem from="1710032703560" duration="1842000" />
       <workItem from="1710034554173" duration="3939000" />
       <workItem from="1710063533539" duration="3404000" />
-      <workItem from="1710103282375" duration="8483000" />
+      <workItem from="1710103282375" duration="8835000" />
     </task>
     <task id="LOCAL-00001" summary="Version 01&#10;Split the dataset into two groups according to from_account and to_account&#10;&#10;This version focuses on the dataset in to_account.&#10;&#10;Process all the merchant users in to_account, including: merchant transaction frequency distribution, merchant time series transaction data and so on.">
       <option name="closed" value="true" />
