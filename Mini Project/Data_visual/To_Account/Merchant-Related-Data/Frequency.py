@@ -2,6 +2,7 @@ import glob
 
 import numpy as np
 import pandas as pd
+
 from matplotlib import pyplot as plt
 import seaborn as sns
 from sklearn.cluster import KMeans
@@ -17,10 +18,16 @@ from kneed import KneeLocator
 主要包含数据提取和分析，以及数据可视化两部分：
 提取分析中的算法逻辑：1、聚类，实现对不同交易类型的切割。2、分析是否越界，确定合适参数。3、时序分析，确定交易模式
 
+
+
+TODO:季节性变化？
 ################################################
 
 
+
+
 '''
+
 
 
 class Merchant_transaction_frequency:
@@ -183,14 +190,31 @@ class Merchant_transaction_frequency:
             return flag
 
     def analysis_by_weekday(self):
-        self.weekday_transactions = self.weekday_data.groupby('not_happened_yet_date')['monopoly_money_amount'].agg(
-            ['count', 'mean']).rename(columns={'count': 'Transactions', 'mean': 'Average Amount'})
-        self.weekend_transactions = self.weekend_data.groupby('not_happened_yet_date')['monopoly_money_amount'].agg(
-            ['count', 'mean']).rename(columns={'count': 'Transactions', 'mean': 'Average Amount'})
+        self.weekday_transactions = self.weekday_data.groupby('Day')['monopoly_money_amount'].agg(
+            ['count', 'mean']).rename(columns={'count': 'Transactions', 'mean': 'Average Amount'}).reset_index()
+        self.weekend_transactions = self.weekend_data.groupby('Day')['monopoly_money_amount'].agg(
+            ['count', 'mean']).rename(columns={'count': 'Transactions', 'mean': 'Average Amount'}).reset_index()
+        print("weekday_transactions:\n ",self.weekday_transactions)
+
+
         print(self.weekday_transactions['Transactions'].mean(), '工作日时序交易数量')
         print(self.weekday_transactions['Average Amount'].mean(), '工作日时序交易数额')
         print(self.weekend_transactions['Transactions'].mean(), '周末时序交易数量')
         print(self.weekend_transactions['Average Amount'].mean(), '周末时序交易数额')
+
+
+    def timedata_to_daynum(self):
+        '''
+        从起始日期开始，换算整个日期数据到递增列表，关键：平闰年，跨年度
+        直接更改self.data数据集，新增一列
+        :param data:
+        :return:
+        '''
+
+        data_start=pd.to_datetime('2025.1.1')
+        self.data["Day"]=self.data['not_happened_yet_date']-data_start
+        self.data["Day"]=self.data['Day'].apply(lambda x:x.days)
+        print(self.data["Day"])
 
     def split_by_weekday(self):
         '''
@@ -203,9 +227,16 @@ class Merchant_transaction_frequency:
         self.data['day_of_week'] = self.data['not_happened_yet_date'].dt.dayofweek
         self.data['type_of_day'] = self.data['day_of_week'].apply(lambda x: 'Weekday' if x < 5 else 'Weekend')
 
+        #需要将dataframe 格式进行编码，
+
+        self.timedata_to_daynum()
+
         # Calculate the average number of transactions and average transaction amount per day for weekdays and weekends
         self.weekday_data = self.data[self.data['type_of_day'] == 'Weekday']
         self.weekend_data = self.data[self.data['type_of_day'] == 'Weekend']
+
+        print("weekday:\n",self.weekday_data['not_happened_yet_date'])
+        print("weekend:\n",self.weekend_data['not_happened_yet_date'])
 
         self.analysis_by_weekday()
 
@@ -266,8 +297,8 @@ class Merchant_transaction_frequency:
 
     def time_frequency_visualisation(self):
         # 为了在3D图中使用，需要一个整数表示日期
-        self.weekday_transactions['Day'] = range(len(self.weekday_transactions))
-        self.weekend_transactions['Day'] = range(len(self.weekend_transactions))
+        # self.weekday_transactions['Day'] = range(len(self.weekday_transactions))
+        # self.weekend_transactions['Day'] = range(len(self.weekend_transactions))
 
         # 创建3D图
         fig = plt.figure(figsize=(10, 7))
