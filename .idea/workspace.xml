@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5a9f188a-0b6c-4f3f-ae17-0a3f3a674f87" name="Changes" comment="Version 01&#10;Split the dataset into two groups according to from_account and to_account&#10;&#10;This version focuses on the dataset in to_account.&#10;&#10;Process all the merchant users in to_account, including: merchant transaction frequency distribution, merchant time series transaction data and so on.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mini Project/Mini Project/Data_visual/To_Account/Personal_Account.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mini Project/Mini Project/Data_visual/To_Account/Personal_Account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mini Project/FinalTask/DataPreprocessing/FindUniqueThirdPartName.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mini Project/FinalTask/DataPreprocessing/FindUniqueThirdPartName.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mini Project/Mini Project/FinalTask/DataPreprocessing/FindUniqueThirdPartName.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mini Project/Mini Project/FinalTask/DataPreprocessing/FindUniqueThirdPartName.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,20 +56,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Study in UK/dsmp-2024-group31/Mini Project/OutPut",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Study in UK/Introduce To AI and Text Analytics/AI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="ShuntianWu" />
@@ -83,7 +84,29 @@
       <recent name="E:\Study in UK\dsmp-2024-group31\Mini Project\Data_visual" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Frequency">
+  <component name="RunManager" selected="Python.FindUniqueThirdPartName">
+    <configuration name="FindUniqueThirdPartName" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dsmp-2024-group31" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Mini Project/FinalTask/DataPreprocessing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mini Project/FinalTask/DataPreprocessing/FindUniqueThirdPartName.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Frequency" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dsmp-2024-group31" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,28 +173,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simple_data_10000" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="dsmp-2024-group31" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Mini Project/Raw_Data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mini Project/Raw_Data/simple_data_10000.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="temple" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dsmp-2024-group31" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -196,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.FindUniqueThirdPartName" />
         <item itemvalue="Python.Frequency" />
         <item itemvalue="Python.Personal_Account" />
         <item itemvalue="Python.temple" />
         <item itemvalue="Python.Random_data" />
-        <item itemvalue="Python.simple_data_10000" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +220,22 @@
       <workItem from="1710103282375" duration="8835000" />
       <workItem from="1710256048914" duration="3310000" />
       <workItem from="1710271526801" duration="5000" />
-      <workItem from="1710291596893" duration="5858000" />
+      <workItem from="1710291596893" duration="6502000" />
+      <workItem from="1710339296920" duration="110000" />
+      <workItem from="1710345885632" duration="616000" />
+      <workItem from="1710380682973" duration="298000" />
+      <workItem from="1710380991429" duration="240000" />
+      <workItem from="1710425917959" duration="631000" />
+      <workItem from="1710500634808" duration="9000" />
+      <workItem from="1710508965218" duration="408000" />
+      <workItem from="1710814217722" duration="2947000" />
+      <workItem from="1713423452424" duration="53000" />
+      <workItem from="1713427922377" duration="1462000" />
+      <workItem from="1713540603073" duration="212000" />
+      <workItem from="1714075530271" duration="7519000" />
+      <workItem from="1714102997004" duration="763000" />
+      <workItem from="1714103799061" duration="2921000" />
+      <workItem from="1714114156158" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="Version 01&#10;Split the dataset into two groups according to from_account and to_account&#10;&#10;This version focuses on the dataset in to_account.&#10;&#10;Process all the merchant users in to_account, including: merchant transaction frequency distribution, merchant time series transaction data and so on.">
       <option name="closed" value="true" />
@@ -303,6 +319,7 @@
     <SUITE FILE_PATH="coverage/dsmp_2024_group31$Random_data.coverage" NAME="Random_data Coverage Results" MODIFIED="1710119181838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mini Project/Raw_Data" />
     <SUITE FILE_PATH="coverage/dsmp_2024_group31$Personal_Account.coverage" NAME="Personal_Account Coverage Results" MODIFIED="1710301309102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mini Project/Data_visual/To_Account" />
     <SUITE FILE_PATH="coverage/dsmp_2024_group31$Trade_detection.coverage" NAME="Trade_detection Coverage Results" MODIFIED="1710096368101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mini Project/Data_visual/To_Account" />
-    <SUITE FILE_PATH="coverage/dsmp_2024_group31$Frequency.coverage" NAME="Frequency Coverage Results" MODIFIED="1710297454853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mini Project/Data_visual/To_Account/Merchant-Related-Data" />
+    <SUITE FILE_PATH="coverage/dsmp_2024_group31$FindUniqueThirdPartName.coverage" NAME="FindUniqueThirdPartName Coverage Results" MODIFIED="1714103927999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mini Project/FinalTask/DataPreprocessing" />
+    <SUITE FILE_PATH="coverage/dsmp_2024_group31$Frequency.coverage" NAME="Frequency Coverage Results" MODIFIED="1710301453445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mini Project/Data_visual/To_Account/Merchant-Related-Data" />
   </component>
 </project>
