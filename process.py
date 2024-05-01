@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np  # 引入numpy库来帮助调整刻度
 
 # 加载数据
-file_path = 'processed_simulated_data\processed_108563213.0_transactions.csv'
+file_path = 'processed_simulated_data\processed_858989281.0_transactions.csv'
 data = pd.read_csv(file_path)
 
 # 转换日期格式并提取月份
@@ -19,7 +19,7 @@ colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'orange', 'purple', 'brown']
 # 绘制图表
 fig, ax = plt.subplots(figsize=(9, 6))
 grouped_data.plot(kind='line', ax=ax, marker='o', color=colors[:len(grouped_data.columns)])
-ax.set_title('Monthly Amount by Merchant Type')
+# ax.set_title('Monthly Amount by Merchant Type')
 ax.set_xlabel('Month')
 ax.set_ylabel('Amount')
 ax.grid(True)

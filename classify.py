@@ -23,18 +23,18 @@ category_merchant_mapping = {
     'Food&Drink': {'Starbucks', 'Costa Coffee', 'The Crown', 'Kings Arms', 'Rose & Crown', 
                    'Frankie & Bennies', 'JustEat', 'Deliveroo', 'Coffee #1'},
     'Clothing': {'Fat Face', 'Topshop', 'Matalan', 'Selfridges', 'North Face', 'Reebok', 
-                 'JD Sports', 'Gap Kids', 'Mothercare', 'Millets', 'Mountain Warehouse', 'Revella', 'Sports Direct',},
-    'Grocery': {'Coop Local', 'Tesco', 'AMAZON', 'Amazon', 'Wool', 'Sainsbury'},
-    'Sports': {'PureGym', 'Loosely Fitted', 'Fitted Stitch'},
+                 'JD Sports', 'Gap Kids', 'Mothercare', 'Millets', 'Mountain Warehouse', 'Revella', 'Sports Direct', 'Wool'},
+    'Grocery': {'Coop Local', 'Tesco', 'AMAZON', 'Amazon', 'Sainsbury', 'Sainsbury Local'},
+    'Sports': {'PureGym', 'Loosely Fitted', 'Fitted Stitch', 'RugbyFields', 'Head'},
     'Entertainment': {'Blizzard', 'Xbox', 'Mojang Studios', 'Gamestation', 'CeX', 'HMV', 'Netflix', 'Disney'},
-    'Art': {'Grand Union BJJ', 'SquareOnix', 'The Works', '"Blackwell\'s"', 
+    'Art': {'Grand Union BJJ', 'SquareOnix', 'The Works', 'Blackwell\'s', 
             'Foyles', 'A Yarn Story', 'Five Senses Art', 'Cass Art', 'Brilliant Brushes', 
             'Collector Cave', 'Barbiee Boutique', 'Victoria Park'},
     'Beauty': {'Lloyds Pharmacy', 'Specsavers', 'Vision Express', 'A Cut Above', 'Remedy plus care', 'Boots'},
     'Housekeeping': {'Lavender Primary', 'Happy Days Home', 'Pets Corner', 'Hobby Lobby', 
-                     'Craftastic', 'Hobbycraft', 'Etsy'},
+                     'Craftastic', 'Hobbycraft', 'Etsy', 'Stitch By Stitch', 'Mamas & Papas'},
     'Bank': {'Halifax', 'LBG'},
-    'Others': {'University College Hospital', 'Kew House'}
+    'Others': {'University College Hospital', 'Kew House', 'Town High'}
 }
 
 # 反向映射商户名称到类型
