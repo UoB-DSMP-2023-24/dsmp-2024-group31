@@ -1,7 +1,0 @@
-import pandas as pd
-# 导入CSV文件
-data = pd.read_csv('E:\A-TB2\mini-project\data\fake_transactional_data_24.csv')
-
-# 打印数据的前几行
-print(data.head())
-
